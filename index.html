@@ -4,21 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fischgames</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="style.css">
+    <script src="anime.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 </head>
 <body>
+    <div class="container">
+        <div class="menu">
+            <div class="menu_item">First page</div>
+            <div class="menu_item">Shop</div>
+            <div class="menu_item">Contacts</div>
+        </div>
+        <div class="menu_small_icon">
+            <div class="stick"></div>
+            <div class="stick"></div>
+            <div class="stick"></div>
+        </div>
+        <div class="menu-small">
+            <div class="menu_small_item">First page</div>
+            <div class="menu_small_item">Shop</div>
+            <div class="menu_small_item">Contacts</div>
+        </div>
     <img src="images/Fischgames icon.png" class="brand-icon">
     <h1>Fischgames</h1>
     <div class="overlay">
         <h2>Brand new games</h2>
         <div class="games-container">
-            <div class="game-item">
-                <img src="images/rust.jpg">
-                <p>Rust mobile version.... Not official</p>
-            </div>
-            <div class="game-item">
-                <img src="images/gta6.jpg">
-                <p>Grand Theft Auto 6</p>
+            <div class="slider">
+                <div><img src="images/rust.jpg" title="Rust mobile version"></div>
+                <div><img src="images/gta6.jpg" title="Grand theft auto"></div>
             </div>
         </div>
     </div>
