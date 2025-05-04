@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Delius&family=Lakki+Reddy&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+.bx-wrapper {
+    width: 775px;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -10,8 +14,71 @@ body {
     text-align: center;
 }
 
+h1 {
+    color: #800a1a;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.menu {
+    width: calc(100% - 4em);
+    height: 2em;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2em;
+    color: #680909;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.menu_item {
+    margin-right: 1em;
+    display: flex;
+    width: 10%;
+    max-width: 400px;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    background-color: #181818;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    border-color: #ff0000;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+.menu_small_icon {
+    display: none;
+}
+
+.menu-small {
+    display: none;
+    height: 2em;
+}
+
+.menu_small_item {
+    display: none;
+}
+
+.stick {
+    width: 80%;
+    height: 5px;
+    background: black;
+}
+
 .overlay {
-    background: rgba(0, 128, 128, 0.7);
+    background: rgba(177, 8, 199, 0.7);
     padding: 20px;
     margin: 50px auto;
     width: 50%;
@@ -38,10 +105,14 @@ body {
 }
 
 .footer {
-    background: navy;
+    background-color: rgb(5, 29, 73);
+    text-align: center;
     padding: 20px;
     position: relative;
+    bottom: 0;
     width: 100%;
+    box-shadow: 0 0 10px #bb0d47, 0 0 20px #bb0d47, 0 0 30px #bb0d47;
+    animation: glow 2s infinite alternate;
 }
 
 .social-icons img {
@@ -55,4 +126,93 @@ body {
     left: 10px;
     width: 85px;
     height: 85px;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-position: center top;
+        background-size: cover;
+        text-align: center;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-small {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        position: absolute;
+        background: white;
+        transform: translateX(-100%);
+    }
+
+    .menu_small_item {
+        height: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu_small_item:first-child {
+        padding-top: calc(50px + 2em);
+    }
+
+    .menu_small_icon {
+        position: absolute;
+        top: 1em;
+        left: 1em;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        z-index: 1;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .overlay {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .games-container {
+        flex-direction: column;
+    }
+
+    .game-item img {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .brand-icon {
+        width: 60px;
+        height: 60px;
+        top: 10px;
+        left: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-top: 80px;
+    }
+
+    .footer {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .social-icons img {
+        width: 30px;
+        margin: 5px;
+    }
+
+    .youtube-btn {
+        width: 90%;
+        font-size: 14px;
+    }
 }
